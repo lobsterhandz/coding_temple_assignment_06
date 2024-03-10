@@ -1,0 +1,20 @@
+import random
+
+# We'll keep a tally of each roll result in this dictionary.
+roll_count = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+
+# Now, we'll roll our die 10 times in a loop.
+for _ in range(10):
+    # This is like rolling a die and seeing the top face value.
+    dice_roll = random.randint(1, 6)
+    
+    # We record the result by increasing the count in our tally.
+    roll_count[dice_roll] += 1
+    
+    # And we'll print out what we just rolled for fun.
+    print(f"You rolled a {dice_roll}!")
+
+# After we've done all our rolling, let's see how many times each number came up.
+print("Here's how many times each number was rolled:")
+for number, frequency in roll_count.items():
+    print(f"Number {number} was rolled {frequency} times.")
